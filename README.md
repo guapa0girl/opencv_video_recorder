@@ -50,6 +50,12 @@ python main.py
 
 ---
 
+## 🎬 실행 영상
+
+![Demo](images/demo.gif)
+
+---
+
 ## ⚙️ 개발 환경
 
 - Python
