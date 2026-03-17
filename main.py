@@ -1,6 +1,6 @@
 import cv2
 
-# 카메라 연결
+# 카메라 열기
 cap = cv2.VideoCapture(0)
 
 # 영상 저장 설정
@@ -14,27 +14,23 @@ while True:
     if not ret:
         break
 
-    # 추가 기능 (좌우 반전)
+    # 좌우 반전 (추가 기능)
     frame = cv2.flip(frame, 1)
 
-    # 녹화 중일 때
+    # 녹화 중이면 저장 + 빨간 점
     if recording:
-        # 빨간 점 표시
-        cv2.circle(frame, (30, 30), 10, (0, 0, 255), -1)
         out.write(frame)
+        cv2.circle(frame, (30, 30), 10, (0, 0, 255), -1)
 
-    # 화면 출력
-    cv2.imshow('Smart Video Recorder', frame)
+    cv2.imshow("Video Recorder", frame)
 
     key = cv2.waitKey(1)
 
-    # Space → 녹화 ON/OFF
-    if key == 32:
-        recording = not recording
-
-    # ESC → 종료
-    elif key == 27:
+    if key == 27:  # ESC
         break
+    elif key == 32:  # Space
+        recording = not recording
+        print("Recording:", recording)
 
 cap.release()
 out.release()

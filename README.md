@@ -1,21 +1,21 @@
-# Smart Video Recorder
-
-## Description
+# My Video Recorder
 
 A simple video recorder using OpenCV.
 
 ## Features
 
-- Real-time camera preview
-- Video recording to file
-- Toggle recording mode (Space key)
-- Exit program (ESC key)
+- Live camera preview
+- Start/Stop recording (Space key)
 - Recording indicator (red circle)
-- Flip filter (additional feature)
+- Exit with ESC key
+- Flip effect (additional feature)
 
-## How to Run
+## Usage
 
 ```bash
-pip install -r requirements.txt
 python main.py
 ```
+
+## Demo
+
+(Add screenshots here)
